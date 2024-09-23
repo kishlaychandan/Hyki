@@ -3,10 +3,10 @@ import Link from "next/link";
 import { BsChevronDown } from "react-icons/bs";
 
 const data = [
-  { id: 1, name: "Home", url: "/" },
-  { id: 2, name: "About", url: "/about" },
-  { id: 3, name: "Products", url: "/product" },
-  { id: 4, name: "Contact", url: "/contact" },
+  { id: 1, name: "HOME", url: "/" },
+  { id: 2, name: "ABOUT", url: "/about" },
+  { id: 3, name: "PRODUCTS", url: "/product" },
+  { id: 4, name: "CONTACT", url: "/contact" },
 ];
 
 const subMenuData = [
@@ -24,7 +24,7 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
           <React.Fragment key={item.id}>
             {!!item?.subMenu ? (
               <li
-                className="cursor-pointer flex items-center gap-2 relative"
+                className="cursor-pointer  flex items-center gap-2 relative"
                 onMouseEnter={() => setShowCatMenu(true)}
                 onMouseLeave={() => setShowCatMenu(false)}
               >
@@ -53,7 +53,7 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
                 )}
               </li>
             ) : (
-              <li className="cursor-pointer">
+              <li className="cursor-pointer text-amber-900 font-bold">
                 <Link href={item?.url}>{item.name}</Link>
               </li>
             )}
